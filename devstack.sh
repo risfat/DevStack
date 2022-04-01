@@ -530,11 +530,13 @@ Y | y)
 		$s1
 		echo
 		echo "$YELLOW Creating server block for phpMyAdmin	$END"
-		sudo ln -s /usr/share/phpmyadmin/ /var/www/
+		
 		if [ $stack = 1 ]; then
-			sudo mv /usr/share/phpmyadmin /var/www/html/
-			sudo systemctl reload apache2
+			sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+			sudo a2enconf phpmyadmin.conf
+			sudo systemctl restart apache2
 		else
+			sudo ln -s /usr/share/phpmyadmin/ /var/www/
 			sudo systemctl reload nginx
 		fi
 
