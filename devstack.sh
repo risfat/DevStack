@@ -534,6 +534,8 @@ Y | y)
 		if [ $stack = 1 ]; then
 			sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
 			sudo a2enconf phpmyadmin.conf
+			#installing php module
+			sudo apt-get install libapache2-mod-php8.0
 			sudo systemctl restart apache2
 		else
 			sudo ln -s /usr/share/phpmyadmin/ /var/www/
