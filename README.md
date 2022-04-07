@@ -20,7 +20,7 @@ DevStack can install
 13. Build Essential packages
 14. curl
 
-Gyro Pilot isn't about to only install programes automatically. It will also Configure all the programs automatically. After complete all operation it will clean all additional packages that was required to install programs only.
+DevStack isn't about to only install programes automatically. It will also Configure all the programs automatically. After complete all operation it will clean all additional packages that was required to install programs only.
 
 # Some basic information
 1. Nginx configuration path is = `/etc/nginx/conf.d/`
