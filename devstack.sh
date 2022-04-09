@@ -344,9 +344,9 @@ fi
 
 
 echo "$RED
----------------------------------------------------
-|  		MySQL Security Installation ...!    	   |
----------------------------------------------------
+-----------------------------------------------------
+|  		  MySQL Security Installation ...!			|
+-----------------------------------------------------
 $END"
 
 read -p "Do you want to run MySql Security Installation? [Y,n]: " mysqlsec
@@ -376,6 +376,10 @@ n | N)
 	;;
 
 *)
+	echo "$RED Going To the Next Step! $END"
+	$s2
+	;;
+esac
 
 #PHP
 echo "$RED
