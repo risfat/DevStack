@@ -368,6 +368,7 @@ if command -v mysql; then
 	$mss
 	$s2
 fi
+;;
 
 n | N)
 	echo "$RED Okay! Going Ahead $END"
