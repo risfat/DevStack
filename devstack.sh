@@ -349,7 +349,7 @@ echo "$RED
 ---------------------------------------------------
 $END"
 
-if command -v $mysql; then
+if command -v mysql; then
 	echo "$GREEN $mysql Found! $END"
 	echo "$BLUE \$$mss $END"
 	$mss
