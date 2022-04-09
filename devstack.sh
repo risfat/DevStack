@@ -342,6 +342,19 @@ else
 	echo
 fi
 
+
+echo "$RED
+---------------------------------------------------
+|  		MySQL Security Installation ...!    	   |
+---------------------------------------------------
+$END"
+
+read -p "Do you want to run MySql Security Installation? [Y,n]: " mysqlsec
+
+case $mysqlsec in
+
+y | Y)
+	
 #POST SECURITY
 echo "$RED
 ---------------------------------------------------
@@ -355,6 +368,13 @@ if command -v mysql; then
 	$mss
 	$s2
 fi
+
+n | N)
+	echo "$RED Okay! Going Ahead $END"
+	$s2
+	;;
+
+*)
 
 #PHP
 echo "$RED
@@ -605,11 +625,11 @@ echo "$RED
 $END"
 
 echo "$RED
-Do you want to install git, build-essential, Node.js 14.x, Composer, Laravel, Vue?
+Do you want to install git, build-essential, Node.js 16.x, Composer, Laravel, Vue?
 Enter \"G\" to Install GIT Only
 Enter \"GB\" to Install GIT & Build-Essential Only
-Enter \"YN\" to Install Node.js 14.x Only
-Enter \"NC\" to Install Node.js 14.x and Composer Only
+Enter \"YN\" to Install Node.js 16.x Only
+Enter \"NC\" to Install Node.js 16.x and Composer Only
 Enter \"LV\" to Install Comoser, Laravel and Vue Only
 Enter \"Y/y\" to Install all together.
 Enter \"N/n\" or Press any key to exit without additional package.
