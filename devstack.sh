@@ -783,19 +783,19 @@ Y | y)
 	fi
 
 	#NODEJS
-	echo "$RED Installting Node.js v14.x. $END"
+	echo "$RED Installting Node.js v16.x. $END"
 	if ! command -v node; then
 		if command -v curl; then
-			echo "$RED Adding Node.js v14.x required repo. to source. $END"
-			curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+			echo "$RED Adding Node.js v16.x required repo. to source. $END"
+			curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 		else
 			echo "$RED CURL is not found. Installing CURL! $END"
 			${pacm} ${yes} install curl
-			echo "$RED Adding Node.js v14.x required repo. to source. $END"
-			curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+			echo "$RED Adding Node.js v16.x required repo. to source. $END"
+			curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 		fi
 		$s1
-		echo "$RED Now Installing Node.js v14.x$END"
+		echo "$RED Now Installing Node.js v16.x$END"
 		$s1
 		${pacm} ${yes} install ${nodejs}
 		echo "$RED ${nodejs} installation finished.$END"
@@ -838,20 +838,20 @@ Y | y)
 		else
 			echo "$YELLOW Node.js not found. Installing Node.js first! $END"
 			if command -v curl; then
-				echo "$RED Adding Node.js v14.x required repo. $END"
-				curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+				echo "$RED Adding Node.js v16.x required repo. $END"
+				curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 			else
 				echo "$RED CURL is not found. Installing CURL! $END"
 				${pacm} ${yes} install curl
-				echo "$RED Adding Node.js v14.x required repo. $END"
-				curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+				echo "$RED Adding Node.js v16.x required repo. $END"
+				curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 			fi
 			$s1
-			echo "$RED Now Installing Node.js v14.x$END"
+			echo "$RED Now Installing Node.js v16.x$END"
 			$s1
 			${pacm} ${yes} install ${nodejs}
 			echo
-			echo "$RED Now Installing Node.js v14.x$END"
+			echo "$RED Now Installing Node.js v16.x$END"
 			$s1
 			sudo npm install -g @vue/cli
 			echo "$RED Vue Clie installation finished.\nThank you for executing Dev Stack. Feel Free to Contribute.\nRegards\nMd. Risfat Amin 	$END"
